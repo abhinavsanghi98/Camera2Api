@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".VideoActivity">
+
+
+    <SurfaceView
+        android:id="@+id/surface_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        >
+
+    </SurfaceView>
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_above="@+id/actions_layout"
+        android:gravity="center_horizontal"
+        android:text="@string/Record"
+        android:textSize="14sp"
+        android:textColor="@android:color/holo_red_dark"
+        android:visibility="invisible"
+        tools:visibility="visible"/>
+    <RelativeLayout
+        android:id="@+id/actions_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#222020">
+        <Button
+            android:id="@+id/switch_mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="16dp"
+            android:text="@string/photo"
+            style="?android:attr/borderlessButtonStyle"
+            android:clickable="true"
+            android:textColor="@android:color/white"
+            android:focusable="true"/>
+
+        <ImageButton
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="64dp"
+            android:layout_centerInParent="true"
+            android:background="?android:selectableItemBackground"
+            android:src="@drawable/record"
+            android:padding="16dp" />
+
+        <ImageButton
+            android:id="@+id/flip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="?android:selectableItemBackground"
+            android:padding="16dp"
+            android:src="@drawable/ic_switch_camera" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
